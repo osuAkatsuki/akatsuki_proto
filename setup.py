@@ -4,7 +4,7 @@ import setuptools
 
 setup(
     name="akatsuki_proto",
-    version="0.1.1",
+    version="0.1.2",
     author="Akatsuki",
     description="Protobuf files & source generation for Akatsuki",
     packages=setuptools.find_packages(),

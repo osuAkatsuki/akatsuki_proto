@@ -3,7 +3,7 @@ name: Publish Akatsuki Protobuf to PyPI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   compile-and-publish:

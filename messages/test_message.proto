@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package messages;
+
+import "messages/example_enum.proto";
+
+message TestMessage {
+    string partition_key = 1;
+    string message_content = 2;
+    ExampleEnum example_enum = 3;
+}

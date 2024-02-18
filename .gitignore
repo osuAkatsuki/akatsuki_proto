@@ -1,0 +1,4 @@
+akatsuki_proto/
+build/
+*.egg-info
+dist/

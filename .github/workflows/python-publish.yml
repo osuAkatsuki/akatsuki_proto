@@ -1,0 +1,35 @@
+name: Publish Akatsuki Protobuf to PyPI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  compile-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+
+      - uses: arduino/setup-protoc@v2
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install mypy-protobuf
+
+      - name: Compile protobuf to Python
+        run: |
+          python compile.py
+
+      - name: Build package and upload to PyPI
+        run: |
+          python setup.py sdist bdist_wheel
+          python -m twine upload dist/*
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}

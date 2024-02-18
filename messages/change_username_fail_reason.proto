@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package messages;
+
+enum ChangeUsernameFailReason {
+    UserNotFound = 0;
+    InvalidUsername = 1;
+    UsernameAlreadyInUse = 2;
+}

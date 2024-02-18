@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package messages;
+
+import "messages/change_username_fail_reason.proto";
+
+message ChangeUsernameFailedEvent {
+    int32 user_id = 0;
+    string new_username = 1;
+    ChangeUsernameFailReason fail_reason = 2;
+}

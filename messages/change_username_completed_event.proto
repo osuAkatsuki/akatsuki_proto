@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package messages;
+
+message ChangeUsernameCompletedEvent {
+    int32 user_id = 1;
+    string old_username = 2;
+    string new_username = 3;
+}

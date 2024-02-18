@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package messages;
-
-enum ExampleEnum {
-    A = 0;
-    B = 1;
-}

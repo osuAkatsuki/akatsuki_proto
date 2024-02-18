@@ -3,7 +3,7 @@ syntax = "proto3";
 package messages;
 
 enum ChangeUsernameFailReason {
-    UserNotFound = 1;
-    InvalidUsername = 2;
-    UsernameAlreadyInUse = 3;
+    UserNotFound = 0;
+    InvalidUsername = 1;
+    UsernameAlreadyInUse = 2;
 }
